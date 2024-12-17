@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* add costom color in class bg-custom  */
+.bg-custom {
+    background: linear-gradient(135deg, #00feba, #5b548a);
+}
