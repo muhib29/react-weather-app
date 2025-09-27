@@ -2,7 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* add costom color in class bg-custom  */
-.bg-custom {
-    background: linear-gradient(135deg, #00feba, #5b548a);
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom focus styles */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
 }
