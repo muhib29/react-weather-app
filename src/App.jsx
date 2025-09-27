@@ -114,7 +114,7 @@ const App = () => {
 
   // Load default city on mount
   useEffect(() => {
-    fetchWeatherData("Karachi");
+    fetchWeatherData("Bishops Stortford");
   }, []);
 
   return (
